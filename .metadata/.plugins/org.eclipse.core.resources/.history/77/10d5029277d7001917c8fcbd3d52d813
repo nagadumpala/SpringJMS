@@ -1,0 +1,26 @@
+package com.example.demo.services;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloWorldAmqService  {
+	@ServiceActivator
+	public String processMsg(String msg) {
+		DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("*********** impelment**"+ msg + " as of "+sdf.format(date)+" ***********  " );
+		return msg;
+	}
+	
+	public void errorHandler(Exception e) {
+		System.out.println("error" + );
+		e.printStackTrace();
+	}
+
+}

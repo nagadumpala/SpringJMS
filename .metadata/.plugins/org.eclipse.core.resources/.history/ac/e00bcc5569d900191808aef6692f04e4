@@ -1,0 +1,20 @@
+package com.example.demo.services;
+
+import org.springframework.stereotype.Service;
+
+
+
+@Service
+public abstract class MessageReceiverService implements AMQReceiver  {
+
+
+	public void receiveMsg(Object message) {
+	
+		String mesg = (String) message;
+		
+		System.out.println("received " + mesg);
+		receiveMesg(msg);
+
+	}
+
+}

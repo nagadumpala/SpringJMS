@@ -1,0 +1,13 @@
+package com.example.demo.services;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Data
+@Slf4j @RequiredArgsConstructor
+public class Deal {
+
+	private String dealNo;
+	private int extRefNo;
+}

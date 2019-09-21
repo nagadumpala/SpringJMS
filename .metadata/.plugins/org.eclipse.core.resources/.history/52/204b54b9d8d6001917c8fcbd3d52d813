@@ -1,0 +1,20 @@
+package com.example.demo.config;
+
+import javax.jms.JMSException;
+import javax.jms.Queue;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.ibm.mq.jms.MQQueue;
+ 
+@Configuration
+public class HelloWorldAmqConfig {
+ 
+    public static final String HELLO_WORLD_QUEUE = "nagaQueue";
+ 
+    @Bean
+    public Queue helloWorldJMSQueue() throws JMSException {
+        return new MQQueue(HELLO_WORLD_QUEUE);
+    }
+}

@@ -1,0 +1,20 @@
+package com.example.demo.services;
+
+import org.springframework.stereotype.Service;
+
+
+@Service
+public   class MessageReceiverService  {
+
+
+	public void receiveMsg(Object message) {
+		
+		String mesg = (String) message;
+		Class<MessageReceiverService2> c = MessageReceiverService2.class;
+		System.out.println("received " + mesg);
+
+	}
+
+
+
+}

@@ -1,0 +1,66 @@
+package com.example.demo;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.jms.annotation.EnableJms;
+
+import com.example.demo.services.AMQReceiver;
+
+@SpringBootApplication
+@EnableJms
+@ImportResource("classpath*:/springintegration-config.xml")
+public class DemoApplication implements CommandLineRunner {
+
+	@Autowired
+	AMQReceiver aMQReceiver;
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+		
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		System.out.println("dd");
+	}
+	
+//	String BROKER_URL = "tcp://localhost:61616"; 
+//	String BROKER_USERNAME = "admin"; 
+//	String BROKER_PASSWORD = "admin";
+//	
+//	@Bean
+//	public ActiveMQConnectionFactory connectionFactory(){
+//	    ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
+//	 
+//	    return connectionFactory;
+//	}
+//	
+	
+	/*
+	 * @Bean public JmsListenerContainerFactory<?> myFactory( ConnectionFactory
+	 * connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer) {
+	 * 
+	 * DefaultJmsListenerContainerFactory factory = new
+	 * DefaultJmsListenerContainerFactory(); configurer.configure(factory,
+	 * connectionFactory); return factory; } // Serialize message content to json
+	 * using TextMessage
+	 * 
+	 * @Bean public MessageConverter jacksonJmsMessageConverter() {
+	 * MappingJackson2MessageConverter converter = new
+	 * MappingJackson2MessageConverter(); converter.setTargetType(MessageType.TEXT);
+	 * converter.setTypeIdPropertyName("_type"); return converter; }
+	 * 
+	 * 
+	 * 
+	 * @JmsListener(destination = "${my.queue}", containerFactory = "myFactory")
+	 * public void processMsg(String msg) {
+	 * 
+	 * System.out.println("*************"+ msg + " a ***********  " ); }
+	 */
+
+}

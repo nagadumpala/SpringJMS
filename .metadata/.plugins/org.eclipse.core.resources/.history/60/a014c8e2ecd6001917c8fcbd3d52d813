@@ -1,0 +1,19 @@
+package com.example.demo.services;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloWorldAmqService {
+	@JmsListener(destination = "${my.queue}")
+	public void processMsg(String msg) {
+	
+		System.out.println("*************"+ msg + " a ***********  " );
+	}
+
+}

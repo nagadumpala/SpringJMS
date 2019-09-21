@@ -1,0 +1,35 @@
+package com.example.demo.services;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Data
+@Slf4j @RequiredArgsConstructor
+public class Deal {
+
+
+	public String getDealNo() {
+		return dealNo;
+	}
+	@Override
+	public String toString() {
+		return "Deal [dealNo=" + dealNo + ", extRefNo=" + extRefNo + "]";
+	}
+	public void setDealNo(String dealNo) {
+		this.dealNo = dealNo;
+	}
+	public int getExtRefNo() {
+		return extRefNo;
+	}
+	public void setExtRefNo(int extRefNo) {
+		this.extRefNo = extRefNo;
+	}
+	public Deal(String dealNo, int extRefNo) {
+		super();
+		this.dealNo = dealNo;
+		this.extRefNo = extRefNo;
+	}
+	private String dealNo;
+	private int extRefNo;
+}

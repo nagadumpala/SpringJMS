@@ -1,0 +1,21 @@
+//package com.example.demo.services;
+//
+//import org.springframework.stereotype.Service;
+//
+//
+//@Service
+//public   class MessageReceiverService2  {
+//
+//
+//	@QFXLMReceiver
+//	public void receiveMsg(Object message) {
+//		
+//		String mesg = (String) message;
+//		
+//		System.out.println("received " + mesg);
+//
+//	}
+//
+//
+//
+//}

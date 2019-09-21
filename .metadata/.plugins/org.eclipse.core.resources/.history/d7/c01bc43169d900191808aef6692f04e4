@@ -1,0 +1,12 @@
+package com.example.demo.services;
+
+import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.stereotype.Service;
+
+@Service
+public interface AMQReceiver {
+
+	
+	public  void receiveMsg(Object msg);
+	public void receiveMesg(String msg);
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jms="http://www.springframework.org/schema/integration/jms"
+       xmlns:integration="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
+
+       <integration:annotation-config/>
+       <import resource="jms-listener-container-config.xml"/>
+   
+    <jms:message-driven-channel-adapter id="inRecvJMSAdapater" destination="helloWorldJMSQueue"
+        channel="inRecvChannel" connection-factory="connectionFactory" acknowledge="transacted"/>
+
+ <jms:outbound-channel-adapter id="jmsOut" 
+                                      channel="outSendJMSAdapter"
+                                      connection-factory="connectionFactory" 
+                                      destination="helloWorldJMSQueue" 
+                                      delivery-persistent="true" ></jms:outbound-channel-adapter>
+    <integration:channel id="inRecvChannel"/>
+    <integration:channel id="outSendJMSAdapter"/>
+
+    <integration:service-activator id="helloWorldServiceActivator" input-channel="inRecvChannel"
+                                   ref="helloWorldAmqService" method="processMsg"/>
+</beans>

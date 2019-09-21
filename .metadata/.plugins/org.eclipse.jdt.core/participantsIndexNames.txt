@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\dumpa\Documents\workspace-sts-3.9.9.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1293334409.index
+\samplejmsapp\src\main\resources

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;QFXLMmessaging.java&apos; to &apos;citi.qfxlm.messaging-3/src/main/java/com.citi.qfxlm.messaging&apos;&#x0D;&#x0A;- Original project: &apos;citi.qfxlm.messaging-2&apos;&#x0D;&#x0A;- Destination element: &apos;citi.qfxlm.messaging-3/src/main/java/com.citi.qfxlm.messaging&apos;&#x0D;&#x0A;- Original element: &apos;com.citi.qfxlm.messaging.QFXLMmessaging.java&apos;" description="Copy compilation unit" destination="=citi.qfxlm.messaging-3/src\/main\/java&lt;com.citi.qfxlm.messaging" element1="/src\/main\/java&lt;com.citi.qfxlm.messaging{QFXLMmessaging.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1569065035989" units="1" version="1.0"/>
+</session>

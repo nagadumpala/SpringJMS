@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="citi.qfxlm.messaging"/>
+<aop-project name="demo"/>
+<aop-project name="demo - Copy"/>
+</aop-reference-model>

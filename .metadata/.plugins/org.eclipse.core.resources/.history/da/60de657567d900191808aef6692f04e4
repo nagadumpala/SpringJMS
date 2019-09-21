@@ -1,0 +1,9 @@
+package com.example.demo.services;
+
+public interface AMQReceiver {
+
+	public default void receiveMsg() {
+		
+	}
+	public String receiveMsg();
+}
